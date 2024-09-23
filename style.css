@@ -182,7 +182,7 @@ section h2 {
         position: relative;
         margin-bottom: 10px; /* Push date above content */
         left: 0; /* Reset the date’s position */
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .timeline-content {
@@ -202,10 +202,6 @@ section h2 {
         padding: 10px;
     }
 }
-
-
-
-
 
 .home-content {
     display: flex;
@@ -273,7 +269,7 @@ section h2 {
 
 @media (max-width: 768px) {
     .research-interests {
-        padding-left: 10px;
+        padding-left: 15px;
         grid-template-columns: 1fr 1fr; /* Two column on mobile */
     }
 }
