@@ -16,7 +16,7 @@ body {
         font-size: 14px; /* Slightly smaller font for tablets */
     }
 
-    header, nav ul li, .timeline-date, .timeline-content h3, .timeline-content p {
+    header, nav ul li{
         font-size: 0.9em; /* Decrease font size for specific elements */
     }
 }
@@ -27,7 +27,7 @@ body {
         font-size: 12px; /* Smaller font for mobile */
     }
 
-    header, nav ul li, .timeline-date, .timeline-content h3, .timeline-content p {
+    header, nav ul li{
         font-size: 0.8em; /* Decrease font size even more on mobile */
     }
 }
@@ -114,50 +114,6 @@ section h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
 }
-
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-    .timeline {
-        width: 100%; /* Make timeline full-width on mobile */
-    }
-
-    .timeline::before {
-        left: 10px; /* Adjust the position of the timeline line */
-    }
-
-    .timeline-item {
-        padding-left: 40px; /* Reduce padding on smaller screens */
-    }
-
-    .timeline-date {
-        left: -70px; /* Adjust date position */
-        font-size: 0.9em; /* Make date smaller */
-    }
-
-    .timeline-content {
-        padding: 10px; /* Reduce padding for content on mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .timeline::before {
-        left: 8px; /* Further adjust the timeline line for small screens */
-    }
-
-    .timeline-item {
-        padding-left: 30px; /* Reduce padding for very small screens */
-    }
-
-    .timeline-date {
-        left: -60px; /* Adjust date position */
-        font-size: 0.8em; /* Make date even smaller */
-    }
-
-    .timeline-content {
-        padding: 8px; /* Reduce content padding for very small screens */
-    }
-}
-
 .timeline-content:hover{
     /*transform: translateY(-5px);*/
     background-color: beige;
@@ -201,6 +157,50 @@ section h2 {
 .courses li {
     margin-bottom: 5px;
 }
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .timeline {
+        width: 100%; /* Make timeline full-width on mobile */
+    }
+
+    .timeline::before {
+        left: 10px; /* Adjust the position of the timeline line */
+    }
+
+    .timeline-item {
+        padding-left: 40px; /* Reduce padding on smaller screens */
+    }
+
+    .timeline-date {
+        left: -70px; /* Adjust date position */
+        font-size: 0.9em; /* Make date smaller */
+    }
+
+    .timeline-content {
+        padding: 10px; /* Reduce padding for content on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline::before {
+        left: 8px; /* Further adjust the timeline line for small screens */
+    }
+
+    .timeline-item {
+        padding-left: 30px; /* Reduce padding for very small screens */
+    }
+
+    .timeline-date {
+        left: -60px; /* Adjust date position */
+        font-size: 0.8em; /* Make date even smaller */
+    }
+
+    .timeline-content {
+        padding: 8px; /* Reduce content padding for very small screens */
+    }
+}
+
+
 
 
 .home-content {
@@ -242,7 +242,7 @@ section h2 {
 
     .home-text {
         padding-right: 0; /* Remove right padding */
-        text-align: center; /* Center text */
+        text-align: justify; /* Center text */
     }
 
     .home-photo img {
