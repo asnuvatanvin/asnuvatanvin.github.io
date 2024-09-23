@@ -97,14 +97,19 @@ section h2 {
     position: relative;
     margin: 10px 0;
     padding-left: 60px;
+    display: flex;
+    flex-direction: row;
 }
 
 .timeline-date {
     position: absolute;
     left: -90px;
     top: 0;
+    width: 100px;
     font-weight: bold;
     color: #333;
+    /*margin-right: 20px;*/
+    flex-shrink: 0;
 }
 
 .timeline-content {
@@ -113,6 +118,7 @@ section h2 {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
+    flex-grow: 1;
 }
 .timeline-content:hover{
     /*transform: translateY(-5px);*/
@@ -160,46 +166,43 @@ section h2 {
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     .timeline {
-        width: 100%; /* Make timeline full-width on mobile */
+        width: 100%; /* Make the timeline full width on mobile */
     }
 
     .timeline::before {
-        left: 10px; /* Adjust the position of the timeline line */
-        border-left: 1px solid #333;
+        display: none; /* Remove the vertical line for mobile view */
     }
 
     .timeline-item {
-        padding-left: 10px; /* Reduce padding on smaller screens */
+        padding-left: 0;
+        margin-bottom: 20px;
     }
 
     .timeline-date {
-        left: -60px; /* Adjust date position */
-        font-size: 0.9em; /* Make date smaller */
+        position: relative;
+        margin-bottom: 10px; /* Push date above content */
+        left: 0; /* Reset the date’s position */
+        font-size: 1rem;
     }
 
     .timeline-content {
-        padding: 5px; /* Reduce padding for content on mobile */
+        padding: 15px;
+        font-size: 0.9rem; /* Adjust font size */
     }
 }
 
+/* Media query for very small screens */
 @media (max-width: 480px) {
-    .timeline::before {
-        left: 8px; /* Further adjust the timeline line for small screens */
-    }
-
     .timeline-item {
-        padding-left: 30px; /* Reduce padding for very small screens */
-    }
-
-    .timeline-date {
-        left: -60px; /* Adjust date position */
-        font-size: 0.8em; /* Make date even smaller */
+        margin-bottom: 15px;
     }
 
     .timeline-content {
-        padding: 8px; /* Reduce content padding for very small screens */
+        font-size: 0.8rem;
+        padding: 10px;
     }
 }
+
 
 
 
