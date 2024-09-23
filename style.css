@@ -169,16 +169,16 @@ section h2 {
     }
 
     .timeline-item {
-        padding-left: 20px; /* Reduce padding on smaller screens */
+        padding-left: 10px; /* Reduce padding on smaller screens */
     }
 
     .timeline-date {
-        left: -70px; /* Adjust date position */
+        left: -60px; /* Adjust date position */
         font-size: 0.9em; /* Make date smaller */
     }
 
     .timeline-content {
-        padding: 10px; /* Reduce padding for content on mobile */
+        padding: 5px; /* Reduce padding for content on mobile */
     }
 }
 
@@ -270,6 +270,7 @@ section h2 {
 
 @media (max-width: 768px) {
     .research-interests {
+        padding-left: 10px;
         grid-template-columns: 1fr 1fr; /* Two column on mobile */
     }
 }
