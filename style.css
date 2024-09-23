@@ -165,10 +165,11 @@ section h2 {
 
     .timeline::before {
         left: 10px; /* Adjust the position of the timeline line */
+        border-left: 1px solid #333;
     }
 
     .timeline-item {
-        padding-left: 40px; /* Reduce padding on smaller screens */
+        padding-left: 20px; /* Reduce padding on smaller screens */
     }
 
     .timeline-date {
@@ -269,7 +270,7 @@ section h2 {
 
 @media (max-width: 768px) {
     .research-interests {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr 1fr; /* Two column on mobile */
     }
 }
 .research-interests li {
