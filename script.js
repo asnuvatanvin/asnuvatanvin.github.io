@@ -42,3 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
     initSlides("project3");
 });
 
+const bubbles = document.querySelectorAll('.bubble');
+const bubbleCount = bubbles.length;
+const angleStep = 360 / bubbleCount;
+const radius = 150; // Adjust this based on diagram-container size
+
+bubbles.forEach((bubble, index) => {
+    const angle = angleStep * index;
+    const x = radius * Math.cos((angle * Math.PI) / 180);
+    const y = radius * Math.sin((angle * Math.PI) / 180);
+    
+    bubble.style.transform = `translate(${x}px, ${y}px)`;
+    bubble.style.zIndex = index; // Ensure proper layering
+});
+
+
