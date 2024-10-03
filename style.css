@@ -562,8 +562,8 @@ section h2 {
 
 @media (max-width: 480px) {
     .diagram-container {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
     .bubble {
         width: 60px;
