@@ -1,3 +1,7 @@
+:root {
+    --bubble-color: #c395c1; /* Define your bubble background color */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -278,6 +282,7 @@ section h2 {
 }
 
 
+
 .horizontal-scroll {
     padding: 20px 0;
 }
@@ -445,9 +450,9 @@ section h2 {
 
 .project-slideshow {
     position: relative;
-    height: auto; /* Fixed height for the slideshow */
+    height: 400px; /* Fixed height for the slideshow */
     width: 100%; /* Ensure the slideshow takes the full width */
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -500,6 +505,72 @@ section h2 {
     background-color: #f1efef;
 
 }
+
+.diagram-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bubble {
+    position: absolute;
+    background-color: var(--bubble-color);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    z-index: 1; /* Ensure bubbles are layered correctly */
+}
+
+.bubble:hover {
+    transform: scale(1.2);
+    z-index: 10; /* Bring hovered bubble to the front */
+}
+
+
+/* Different colors for each bubble */
+.bubble:nth-child(1) { background-color: #000000; }
+.bubble:nth-child(2) { background-color: #f3722c; }
+.bubble:nth-child(3) { background-color: #f8961e; }
+.bubble:nth-child(4) { background-color: #f9c74f; }
+.bubble:nth-child(5) { background-color: #90be6d; }
+.bubble:nth-child(6) { background-color: #577590; }
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .diagram-container {
+        width: 300px;
+        height: 300px;
+    }
+    .bubble {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .diagram-container {
+        width: 200px;
+        height: 200px;
+    }
+    .bubble {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 
 
 footer {
