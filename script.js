@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initSlides("project1");
     initSlides("project2");
     initSlides("project3");
+    initSlides("project4");
 });
 
 const bubbles = document.querySelectorAll('.bubble');
