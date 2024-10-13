@@ -59,6 +59,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+.highlight{
+    color: #db4c4c;
+}
+
 .section_box {
     padding: 20px;
     margin: 20px auto;
@@ -538,6 +542,9 @@ section h2 {
     transform: scale(1.2);
     z-index: 10; /* Bring hovered bubble to the front */
 }
+.research-list {
+    display: none; 
+}
 
 
 /* Different colors for each bubble */
@@ -548,26 +555,43 @@ section h2 {
 .bubble:nth-child(5) { background-color: #90be6d; }
 .bubble:nth-child(6) { background-color: #577590; }
 
+
 /* Media queries for responsive design */
 @media (max-width: 768px) {
     .diagram-container {
-        width: 200px;
-        height: 200px;
+        display: none; /* Hide the bubble diagram on mobile */
     }
-    .bubble {
-        width: 80px;
-        height: 80px;
+
+    .research-list {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style-type: disc;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .research-list li {
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 480px) {
     .diagram-container {
-        width: 150px;
-        height: 150px;
+        display: none; /* Hide the bubble diagram on mobile */
     }
-    .bubble {
-        width: 60px;
-        height: 60px;
+
+    .research-list {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style-type: disc;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .research-list li {
+        margin: 10px 0;
     }
 }
 
