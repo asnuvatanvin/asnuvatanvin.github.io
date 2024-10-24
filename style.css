@@ -75,16 +75,20 @@ nav ul li a {
 
 section h2 {
     text-align: center;
-    margin-bottom: 20px; /* Add spacing below the headline */
-    font-size: 2em; /* Adjust size as needed */
+    margin-bottom: 10px; /* Add spacing below the headline */
+    font-size: 1.5em; /* Adjust size as needed */
     color: #131d89; /* Adjust color as needed */
 }
-.h3{
+
+.h3 {
+    background-color: #ffffff; 
+    padding: 10px 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
     text-align: center;
-    margin-bottom: 20px; /* Add spacing below the headline */
-    font-size: 1.5em; /* Adjust size as needed */
-    color: #333; /* Adjust color as needed */
-    background-color: #f4f4f4;
 }
 /*Education*/
 .timeline {
@@ -430,7 +434,7 @@ section h2 {
     text-align: left;
     width: 100%; /* Ensure it takes the full width of the container */
     padding: 20px;
-    background-color: #f1efef;
+    background-color: #f0f4f8;
 }
 
 .project-slideshow {
@@ -484,22 +488,52 @@ section h2 {
     display: block;
 }
 
-.other_works h3{
-    text-align: center;
-    color: #000000;
-    background-color: #f1efef;
-
-}
 /*Research Interest */
 
-.research-interests {
+.research-section {
+    padding: 40px;
+    background-color: #f0f4f8;
+}
+
+.research-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */
-    gap: 20px; /* Adds space between the items */
-    list-style-type: disc;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 800px; /* Limits the width of the list */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.research-item {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    height: 70px;  /* Set a fixed height for compact look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-item h4 {
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.research-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #899cb0, #42668c);
+    color: white;
+}
+
+.research-item:hover h4 {
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .research-item {
+        height: 50px;  /* Make cards even more compact on mobile */
+    }
 }
 @media (max-width: 1024px) {
     .research-interests {
@@ -517,52 +551,9 @@ section h2 {
     text-align: left; /* Aligns the text to the left */
 }
 
-
-.diagram-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.bubble {
-    position: absolute;
-    background-color: var(--bubble-color);
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
-    z-index: 1; /* Ensure bubbles are layered correctly */
-}
-
-.bubble:hover {
-    transform: scale(1.2);
-    z-index: 10; /* Bring hovered bubble to the front */
-}
 .research-list {
     display: none; 
 }
-
-
-/* Different colors for each bubble */
-.bubble:nth-child(1) { background-color: #000000; }
-.bubble:nth-child(2) { background-color: #f3722c; }
-.bubble:nth-child(3) { background-color: #f8961e; }
-.bubble:nth-child(4) { background-color: #f9c74f; }
-.bubble:nth-child(5) { background-color: #90be6d; }
-.bubble:nth-child(6) { background-color: #577590; }
-
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
