@@ -41,8 +41,8 @@
           of transformer in forecasting multivariate time series and how to
           reduce parameters of the computationally expensive multihead self-attention.</span> In addition to this, I
           am passionate about addressing challenges in the healthcare sector, both in Bangladesh and globally which 
-          resulted in my interest to contribute to research in medical image and signal processing to develop robust technologies
-          that can improve healthcare outcomes. I am also enthusiastic about research in sensor signal processing and mobile computing applications.
+          resulted in my interest in using machine learning to develop lightweight, low-cost, sensor-based health systems capable of operating on basic smartphones and low-power devices
+          as well as advancing the ability of models to learn features from multimodal data and improve zero-shot learning abilities for delivering  personalized, preventive care.          
           <strong>I am actively seeking opportunities to join top computer science research labs as a Graduate Student in Fall 2025.</strong>
           <br><br>In my leisure time, I love to do street photography and read books.
         <div class="contact-links">
@@ -138,15 +138,14 @@
         <p><strong>Tools:</strong> Pytorch, numpy, pandas, seaborn</p>
         <div class="courses">
           <ul>
-            <li>Experimented with various types of implementation strategies of the Vanilla Transformer architecture
-              for forecasting multiple future steps of multivariate time series.</li>
-            <li>Applied low rank factorization for approximating matrices of the attention layer and feed forward layer
-              to reduce parameters and
-              complexity of vanilla transformer.</li>
-            <li>Implemented the low rank matrix transformer on five different multivariate time series dataset to
-              perform long range multi step forecasting and
-              obtained noticeably good results.
-            </li>
+            <li>Experimented with both autoregressive and non autoregressive inference in vanilla transformer for
+              multivariate time series forecasting.</li>
+            <li>Integrated timestamp embeddings with time series data to improve model accuracy in forecasting by
+              providing richer temporal context.</li>
+            <li>Applied low rank factorization to approximate the attention matrices and feed forward layer, to
+              reduce parameters and complexity.</li>
+              <li>Implemented the modified transformer on five multivariate time series datasets, achieving promising
+                results for long-range multi-step forecasting.</li>
             <li>One manuscript is under preparation for this research.</li>
           </ul>
 
@@ -200,16 +199,14 @@
         </p>
         <div class="courses">
           <ul>
-            <li>Studied characteristics of different types of time series data.</li>
-            <li>Experimented with various deep learning based techniques such as CNN, RNN, LSTM, GRU, BiLSTM,
-              self-attention to replace statistical
-              methods(ARIMA, SARIMA etc) for solving multivariate time series forecasting problem.</li>
-            <li>Applied additive decomposition as preprocessing technique to separate the trend, seasonality and
-              residual components from time series and then
-              developed deep learning based modules to forecast multiple future steps of each time series.
-            </li>
-            <li>Implemented the architecture on three distinct multivariate time series, predicted multiple future
-              horizons and obtained good results on each of them.</li>
+            <li>Analysed the characteristics of various time series data.</li>
+            <li>Applied additive decomposition to preprocess time series, separating trend, seasonality and residual
+              components, followed by deep learning based forecasting of multiple future steps for each component.</li>
+            <li>Experimented with several deep learning based algorithms (CNN, RNN, LSTM, GRU, BiLSTM, self-
+              attention) to replace traditional statistical methods(ARIMA, SARIMA etc) for multivariate time series
+              forecasting.</li>
+            <li>Implemented the architecture on four distinct multivariate time series, achieving strong results for
+              predicting multiple future horizons.</li>
             <li>One paper has been published on this research.</li>
           </ul>
 
@@ -242,15 +239,14 @@
             href="https://github.com/asnuvatanvin/Handwritten_Character_Recognition_System/tree/main">Github</a></p>
         <div class="courses">
           <ul>
-            <li>Merged two datasets containing handwritten English capital letters and English digits to form a new
-              dataset.</li>
-            <li>Improved an existing CNN architecture by tuning hyperparameters to reduce overfitting and then trained
-              using
-              <a href="https://yann.lecun.com/exdb/mnist/">MNIST </a>dataset. Improved architecture performed better on
-              test data compared to
-              previous works.
+            <li>Enhanced an existing CNN architecture’s performance on a merged dataset containing English letters
+              and numerals by tuning hyperparameters to reduce overfitting, achieving better test performance on
+              the MNIST dataset compared to previous works and 98.92% test accuracy on the combined dataset.</li>
+            <li>Developed an image processing pipeline with preprocessing steps such as grayscale conversion,
+              binarization, noise reduction, and segmentation (line, word, character) to produce clear images of
+              each character with proper padding.
             </li>
-            <li>Applied the improved architecture on the merged dataset which resulted in 98.92% test accuracy.</li>
+            <li>Deployed the system for real-world handwritten text recognition.</li>
             <li>One conference paper has been published on this research.</li>
           </ul>
         </div>
